@@ -1,0 +1,181 @@
+/* Base Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fb8b24;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Desktop Navigation */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    background-color: white;
+    color: #003366;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #003366;
+    color: white;
+}
+
+.separator {
+    height: 24px;
+    width: 2px;
+    background: white;
+}
+
+/* Navbar Bottom */
+.navbar-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9a031e;
+    padding: 12px 20px;
+    color: white;
+    width: 100%;
+}
+
+.navbar-down ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-down ul li {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar-down ul li:hover {
+    color: #fb8b24;
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.hamburger:hover {
+    opacity: 0.8;
+}
+
+/* Mobile Navigation */
+.mobile-menu {
+    display: none;
+    background-color: #9a031e;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 25px;
+    text-align: center;
+    z-index: 999;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+/* Mobile Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-links li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Menu Extra Items */
+.mobile-extra {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.mobile-extra .nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+}
+.mobile-extra .social-icon{
+padding: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-right, .navbar-down {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Ensure Mobile Menu is Hidden on Large Screens */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .nav-right, .navbar-down {
+        display: flex;
+    }
+}
