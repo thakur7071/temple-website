@@ -1,16 +1,18 @@
 /* Base Styles */
 .navbar {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fb8b24;
     color: white;
     padding: 15px 20px;
-    position: relative;
-    z-index: 1000;
-    width: 100%;
+    z-index: 1000; /* Ensures it's above other elements */
 }
+
 
 /* Logo */
 .logo {
@@ -50,6 +52,7 @@
 
 /* Navbar Bottom */
 .navbar-down {
+    margin-top: 87px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +89,18 @@
     transition: opacity 0.3s;
   
 }
+
+/* Hide scrollbar while keeping scrolling functional */
+.no-scroll {
+    overflow: hidden;
+    padding-right: 15px; /* Prevents layout shift */
+  }
+  
+  /* Optional: Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .no-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
 
 .hamburger:hover {
     opacity: 0.8;

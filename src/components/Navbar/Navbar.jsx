@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [menuOpen]);
+
   return (
     <div>
       <div className="navbar">
-        <h2 className="logo">Gov. of Uttar Pradesh</h2>
+        <h2 className="logo">Logo</h2>
 
         {/* Mobile Menu Icon */}
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
