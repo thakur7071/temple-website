@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { FaFacebook, FaTwitter, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Effect to handle adding/removing no-scroll class
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-  }, [menuOpen]);
 
   return (
     <div>
