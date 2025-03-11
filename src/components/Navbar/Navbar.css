@@ -90,18 +90,6 @@
   
 }
 
-/* Hide scrollbar while keeping scrolling functional */
-.no-scroll {
-    overflow: hidden;
-    padding-right: 15px; /* Prevents layout shift */
-  }
-  
-  /* Optional: Hide scrollbar for WebKit browsers (Chrome, Safari) */
-  .no-scroll::-webkit-scrollbar {
-    display: none;
-  }
-  
-
 .hamburger:hover {
     opacity: 0.8;
 }
